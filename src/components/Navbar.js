@@ -18,7 +18,7 @@ const Navbar = () => {
         </div>
         <div className={show ? "nav-links show-links" : "nav-links"}>
           <Link
-            onClick={() => setShow(!show)}
+            onClick={() => setShow(false)}
             to="/"
             className="nav-link"
             activeClassName="active-link"
@@ -27,7 +27,7 @@ const Navbar = () => {
           </Link>
           <Link
             to="/blogs"
-            onClick={() => setShow(!show)}
+            onClick={() => setShow(false)}
             className="nav-link"
             activeClassName="active-link"
           >
@@ -35,7 +35,7 @@ const Navbar = () => {
           </Link>
           <Link
             to="/tags"
-            onClick={() => setShow(!show)}
+            onClick={() => setShow(false)}
             className="nav-link"
             activeClassName="active-link"
           >
@@ -44,13 +44,13 @@ const Navbar = () => {
           <Link
             to="/about"
             className="nav-link"
-            onClick={() => setShow(!show)}
+            onClick={() => setShow(false)}
             activeClassName="active-link"
           >
             about
           </Link>
           <div className="nav-link contact-link">
-            <Link to="contact" onClick={() => setShow(!show)} className="btn">
+            <Link to="contact" onClick={() => setShow(false)} className="btn">
               Contact
             </Link>
           </div>

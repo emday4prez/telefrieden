@@ -5,8 +5,8 @@ const Footer = () => {
     <footer className="page-footer">
       <p>
         {" "}
-        &copy; 2008 - {new Date().getFullYear()} <span>TeleFrieden</span>. Built
-        with <a href="https://www.gatsbyjs.com">GatsbyJS</a>
+        &copy; 2007 - {new Date().getFullYear()} <span>TeleFrieden</span>. Built
+        with <a href="https://www.gatsbyjs.com">GatsbyJS</a>.
       </p>
     </footer>
   )
