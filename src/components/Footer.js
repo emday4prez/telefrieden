@@ -6,7 +6,19 @@ const Footer = () => {
       <p>
         {" "}
         &copy; 2007 - {new Date().getFullYear()} <span>TeleFrieden</span>. Built
-        with <a href="https://www.gatsbyjs.com">GatsbyJS</a>.
+        with{" "}
+        <a href="https://www.gatsbyjs.com" target="_blank" rel="noreferrer">
+          Gatsby{" "}
+        </a>
+        and{"  "}
+        <a
+          href="https://telefrieden.blogspot.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Blogger
+        </a>
+        .
       </p>
     </footer>
   )

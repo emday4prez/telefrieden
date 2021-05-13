@@ -525,7 +525,7 @@ form > *:last-child {
   border-radius: var(--borderRadius);
 }
 .hero {
-  height: 40vh;
+  height: 30vh;
   position: relative;
   margin-bottom: 2rem;
 }
