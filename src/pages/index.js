@@ -1,7 +1,7 @@
 import React from "react"
-
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
+import AllBlogs from "../components/AllBlogs"
 
 export default function Home() {
   return (
@@ -23,8 +23,7 @@ export default function Home() {
           </div>
         </header>
       </main>
-      
-    
+      <AllBlogs />
     </Layout>
   )
 }
