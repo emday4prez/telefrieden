@@ -50,7 +50,7 @@ const Navbar = () => {
             about
           </Link>
           <div className="nav-link contact-link">
-            <Link to="contact" onClick={() => setShow(false)} className="btn">
+            <Link to="/contact" onClick={() => setShow(false)} className="btn">
               Contact
             </Link>
           </div>

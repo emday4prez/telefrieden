@@ -5,18 +5,15 @@ import { graphql, useStaticQuery } from "gatsby"
 
 const query = graphql`
   {
-    allBloggerPost(limit: 500) {
+    allBloggerPost {
       nodes {
         author {
           displayName
         }
         title
         content
-        published(formatString: "")
+        published
         slug
-        blog {
-          id
-        }
         id
         labels
       }
@@ -27,7 +24,7 @@ const query = graphql`
 const AllBlogs = () => {
   const data = useStaticQuery(query)
   const blogs = data.allBloggerPost.nodes
-  console.log(data)
+
   return (
     <section className="recipes-container">
       <h4>all blogs</h4>

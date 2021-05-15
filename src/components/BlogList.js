@@ -11,7 +11,8 @@ const BlogList = ({ blogs = [] }) => {
 
         return (
           <Link className="recipe" key={id} to={`/${slug}`}>
-            <h5>{title}</h5> <p> {date.toDateString()}</p>
+            <h5>{title}</h5>
+            <p> {date.toDateString()}</p>
           </Link>
         )
       })}

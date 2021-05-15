@@ -1,6 +1,9 @@
 import React from "react"
 import Layout from "../components/Layout"
-const contact = () => {
+import { graphql } from "gatsby"
+import BlogList from "../components/BlogList"
+const contact = ({ data }) => {
+  const blogs = data.allBloggerPost.nodes
   return (
     <Layout>
       <main className="page">
@@ -41,9 +44,29 @@ const contact = () => {
             </form>
           </article>
         </section>
+        <section className="featured-recipes">
+          <h5>Latest Posts</h5>
+          <BlogList blogs={blogs} />
+        </section>
       </main>
     </Layout>
   )
 }
+export const query = graphql`
+  {
+    allBloggerPost(limit: 6) {
+      nodes {
+        author {
+          displayName
+        }
+        title
+        content
+        published
+        slug
+        id
+      }
+    }
+  }
+`
 
 export default contact

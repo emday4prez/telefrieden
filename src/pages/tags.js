@@ -1,8 +1,37 @@
 import React from "react"
 import Layout from "../components/Layout"
+import TagsList from "../components/TagsList"
+import { graphql, Link } from "gatsby"
+import setupTags from "../../utils/setupTags"
 
-const tags = () => {
-  return <Layout>tags</Layout>
+const Tags = ({ data }) => {
+  const newTags = setupTags(data.allBloggerPost.nodes)
+  return (
+    <Layout>
+      <main className="page">
+        <section className="tags-page">
+          {newTags.map((tag, index) => {
+            const [text, value] = tag
+            return (
+              <Link to={`/${text}`} key={index} className="tag">
+                <h5>{text}</h5> <p>({value}) </p>
+              </Link>
+            )
+          })}
+        </section>
+      </main>
+    </Layout>
+  )
 }
 
-export default tags
+export const query = graphql`
+  {
+    allBloggerPost {
+      nodes {
+        labels
+      }
+    }
+  }
+`
+
+export default Tags
