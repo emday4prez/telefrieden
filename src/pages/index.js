@@ -13,17 +13,16 @@ export default function Home() {
             alt="old telephones"
             className="hero-img"
             placeholder="tracedSVG"
-            layout="fullWidth"
+            layout="constrained"
           />
           <div className="hero-container">
             <div className="hero-text">
-              <h1>TeleFrieden</h1>
               <h4>Awarded Top 100 Telecom Blog</h4>
             </div>
           </div>
         </header>
+        <AllBlogs />
       </main>
-      <AllBlogs />
     </Layout>
   )
 }

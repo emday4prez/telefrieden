@@ -28,8 +28,8 @@ const AllBlogs = () => {
   return (
     <section className="recipes-container">
       <h4>all blogs</h4>
-      <TagsList blogs={blogs} />
       <BlogList blogs={blogs} />
+      <TagsList blogs={blogs} />
     </section>
   )
 }
