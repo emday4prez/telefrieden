@@ -5,7 +5,7 @@ const BlogList = ({ blogs = [] }) => {
   return (
     <div className="recipes-list">
       {blogs.map(blog => {
-        const { id, title, published, slug, labels } = blog
+        const { id, title, published, slug } = blog
         const date = new Date(published)
 
         return (

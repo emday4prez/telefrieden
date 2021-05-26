@@ -1,10 +1,10 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
-import Tags from "./tags"
+import slugify from "slugify"
 import { FcCalendar } from "react-icons/fc"
 const BlogTemplate = ({ data }) => {
-  const { title, slug, published, labels, content } = data.bloggerPost
+  const { title, published, labels, content } = data.bloggerPost
   const date = new Date(published)
   return (
     <Layout>
@@ -23,8 +23,9 @@ const BlogTemplate = ({ data }) => {
 
               <p className="recipe-tags">
                 {labels.map((tag, index) => {
+                  const tagSlug = slugify(tag, { lower: true })
                   return (
-                    <Link to={`/${tag}`} key={index}>
+                    <Link to={`/tags/${tagSlug}`} key={index}>
                       {tag}
                     </Link>
                   )

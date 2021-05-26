@@ -1,6 +1,6 @@
 const slugify = require("slugify")
-
 const path = require("path")
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
@@ -19,10 +19,10 @@ exports.createPages = async ({ graphql, actions }) => {
       blog.labels.forEach(label => {
         const tagSlug = slugify(label, { lower: true })
         createPage({
-          path: `/${tagSlug}`,
+          path: `/tags/${tagSlug}`,
           component: path.resolve(`src/templates/tag-template.js`),
           context: {
-            tag: tagSlug,
+            label: label,
           },
         })
       })

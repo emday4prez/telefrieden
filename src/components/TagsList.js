@@ -11,10 +11,10 @@ const TagsList = ({ blogs }) => {
       <h4>Tags</h4>
       <div className="tags-list">
         {newTags.map((tag, index) => {
-          const [text, value, slug] = tag
+          const [text, value] = tag
           const tagSlug = slugify(text, { lower: true })
           return (
-            <Link to={`/${tagSlug}`} key={index}>
+            <Link to={`/tags/${tagSlug}`} key={index}>
               {text} ({value})
             </Link>
           )
