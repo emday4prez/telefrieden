@@ -3,6 +3,8 @@ import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link, graphql } from "gatsby"
 import BlogList from "../components/BlogList"
+import SEO from "../components/SEO"
+
 const about = ({
   data: {
     allBloggerPost: { nodes: blogs },
@@ -10,12 +12,13 @@ const about = ({
 }) => {
   return (
     <Layout>
+      <SEO title="About" />
       <main className="page">
         <section className="about-page">
           <article>
             <p>
-              A provocative, unsponsored assessment of current and future legal,
-              regulatory, marketplace, and cultural issues affecting
+              A provocative, un-sponsored assessment of current and future
+              legal, regulatory, marketplace, and cultural issues affecting
               telecommunications and information policy.
             </p>
             <p>
