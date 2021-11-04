@@ -11,12 +11,12 @@ const BlogTemplate = ({ data }) => {
     <Layout>
       <SEO title={title} />
       <main className="page">
-        <div className="recipe-page">
-          <section className="recipe-hero">
+        <div className="blog-page">
+          <section className="blog-hero">
             <article className="recipe-info">
               <h2>{title}</h2>
 
-              <div className="recipe-icons">
+              <div className="blog-icons">
                 <p>
                   {" "}
                   <FcCalendar /> {date.toDateString()}
@@ -24,7 +24,7 @@ const BlogTemplate = ({ data }) => {
               </div>
 
               {labels !== null && (
-                <p className="recipe-tags">
+                <p className="blog-tags">
                   {labels.map((tag, index) => {
                     const tagSlug = slugify(tag, { lower: true })
                     return (
@@ -37,7 +37,7 @@ const BlogTemplate = ({ data }) => {
               )}
             </article>
           </section>{" "}
-          <section className="recipe-content">
+          <section className="blog-content">
             <div dangerouslySetInnerHTML={{ __html: content }} />
           </section>
         </div>

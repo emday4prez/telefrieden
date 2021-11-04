@@ -695,43 +695,43 @@ form > *:last-child {
 /* Recipe Template */
 /*#########*/
 
-.recipe-hero {
+.blog-hero {
   display: grid;
   gap: 3rem;
 }
-.recipe-hero .about-img {
+.blog-hero .about-img {
   height: 400px;
 }
-.recipe-icons {
+.blog-icons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin: 2rem 0;
   text-align: center;
 }
-.recipe-icons svg {
+.blog-icons svg {
   font-size: 1.5rem;
 }
-.recipe-icons h5,
-.recipe-icons p {
+.blog-icons h5,
+.blog-icons p {
   margin-bottom: 0;
   font-size: 0.85em;
   width: 150px;
 }
-.recipe-icons h5 {
+.blog-icons h5 {
   font-weight: 600;
 }
-.recipe-icons p {
+.blog-icons p {
   color: var(--grey-800);
 }
-.recipe-tags {
+.blog-tags {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   font-size: 0.7em;
   font-weight: 600;
 }
-.recipe-tags a {
+.blog-tags a {
   background: var(--primary-500);
   border-radius: var(--borderRadius);
   color: var(--white);
@@ -740,18 +740,18 @@ form > *:last-child {
   text-transform: capitalize;
 }
 @media screen and (min-width: 992px) {
-  .recipe-hero {
+  .blog-hero {
     grid-template-columns: 4fr 5fr;
     align-items: center;
   }
 }
-.recipe-content {
+.blog-content {
   padding: 3rem 0;
   display: grid;
   gap: 2rem 5rem;
 }
 @media screen and (min-width: 992px) {
-  .recipe-content {
+  .blog-content {
     grid-template-columns: 2fr 1fr;
   }
 }
