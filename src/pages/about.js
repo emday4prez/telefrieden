@@ -17,13 +17,20 @@ const about = ({
         <section className="about-page">
           <article>
             <p>
-              A provocative, un-sponsored assessment of current and future
-              legal, regulatory, marketplace, and cultural issues affecting
-              telecommunications and information policy.
-            </p>
-            <p>
-              Presented by Rob Frieden, Pioneers Chair and Professor of
-              Telecommunications and Law, Penn State University.
+              Rob Frieden is former Pioneers Chair and retired Professor of
+              Telecommunications and Law at Penn State University in the United
+              States. Frieden holds a B.A., with distinction, from the
+              University of Pennsylvania (1977) and a J.D. from the University
+              of Virginia (1980). Before accepting an academic appointment,
+              Frieden practiced law in Washington, D.C., and served as Assistant
+              General Counsel at PTAT Systems, Inc. where he handled corporate,
+              transactional and regulatory issues for the nation's first private
+              undersea fiber optic cable company. He continues to provide legal,
+              management and market forecasting consultancy services. He has
+              held senior policy making positions in international
+              telecommunications at the United States Federal Communications
+              Commission and the National Telecommunications and Information
+              Administration.
             </p>
             <Link to="/contact" className="btn">
               contact
@@ -39,7 +46,7 @@ const about = ({
             as="section"
           />
         </section>
-        <section className="featured-recipes">
+        <section className="featured-blogs">
           <h5>Latest Posts</h5>
           <BlogList blogs={blogs} />
         </section>

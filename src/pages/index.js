@@ -3,8 +3,11 @@ import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import AllBlogs from "../components/AllBlogs"
 import SEO from "../components/SEO"
+import { graphql } from "gatsby"
+import BlogList from "../components/BlogList"
 
-export default function Home() {
+export default function Home({ data }) {
+  const blogs = data.allBloggerPost.nodes
   return (
     <Layout>
       <SEO title="Home" />
@@ -23,8 +26,35 @@ export default function Home() {
             </div>
           </div>
         </header>
-        <AllBlogs />
+
+        <section className="featured-blogs">
+          <h5>
+            A provocative, un-sponsored assessment of current and future legal,
+            regulatory, marketplace, and cultural issues affecting
+            telecommunications and information policy.
+          </h5>
+          <h5>Latest Posts</h5>
+          <BlogList blogs={blogs} />
+        </section>
+        {/* <AllBlogs /> */}
       </main>
     </Layout>
   )
 }
+
+export const query = graphql`
+  {
+    allBloggerPost(limit: 12) {
+      nodes {
+        author {
+          displayName
+        }
+        title
+        content
+        published
+        slug
+        id
+      }
+    }
+  }
+`

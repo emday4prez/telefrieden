@@ -12,21 +12,6 @@ const contact = ({ data }) => {
         <section className="contact-page">
           <article className="contact-info">
             <h3>Want to get in touch?</h3>
-            <p>
-              Marylebone concierge flat white, impeccable Boeing 787 Beams cosy
-              tote bag Scandinavian smart discerning carefully curated
-              remarkable handsome.
-            </p>
-            <p>
-              Craftsmanship bureaux Porter the best Helsinki emerging, classic
-              Lufthansa artisanal vibrant Swiss sophisticated first-class
-              impeccable tote bag.
-            </p>
-            <p>
-              Boutique quality of life Fast Lane joy, Asia-Pacific extraordinary
-              Helsinki Singapore alluring Shinkansen the best. Tote bag sleepy
-              first-class punctual.
-            </p>
           </article>
           <article>
             <form
@@ -50,7 +35,7 @@ const contact = ({ data }) => {
             </form>
           </article>
         </section>
-        <section className="featured-recipes">
+        <section className="featured-blogs">
           <h5>Latest Posts</h5>
           <BlogList blogs={blogs} />
         </section>
